@@ -3,7 +3,8 @@ from mangum import Mangum
 from pydantic import BaseModel
 from typing import List
 
-app = FastAPI()
+app = FastAPI(root_path="/prod")
+
 
 class Employee(BaseModel):
     id: int
